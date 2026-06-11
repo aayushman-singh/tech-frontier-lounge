@@ -57,6 +57,10 @@
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
       "isAccessibleForFree": true,
       "url": "https://techfrontier.site/",
+      "sameAs": [
+        "https://luma.com/slm2wm1a",
+        "https://www.meetup.com/tech-frontier-lounge/events/315169995/"
+      ],
       "image": "https://techfrontier.site/assets/og.jpg",
       "location": {
         "@type": "Place",
@@ -128,7 +132,11 @@
         <a href="#" class="btn btn-primary js-register">Reserve your spot
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#" class="btn btn-ghost js-meetup">Event details on Meetup</a>
+        <div class="hero-details">
+          <a href="#" class="js-luma">Event on Luma</a>
+          <span class="sep" aria-hidden="true">·</span>
+          <a href="#" class="js-meetup">Event on Meetup</a>
+        </div>
       </div>
       <p class="hero-note"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg> Free to attend · Limited seats · New edition every month</p>
     </div>
@@ -156,6 +164,9 @@
         <div class="ev-cta">
           <a href="#" class="btn btn-primary js-register">Sign up via Google Form
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" class="ev-luma js-luma">Full event details on Luma
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a href="#" class="ev-meetup js-meetup">Full event details on Meetup
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -338,7 +349,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">How do I register?<span class="ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
-        <div class="faq-a"><p>Hit any “Register” button — it opens a short Google Form so we can save you a seat. For the full write-up, venue notes, and calendar add, check the event on Meetup. Drop your email in the newsletter too and we'll ping you when the next edition opens.</p></div>
+        <div class="faq-a"><p>Hit any “Register” button — it opens a short Google Form so we can save you a seat. For the full write-up, venue notes, and calendar add, check the event on <a href="#" class="js-luma">Luma</a> or <a href="#" class="js-meetup">Meetup</a>. Drop your email in the newsletter too and we'll ping you when the next edition opens.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Can I give a talk?<span class="ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span></button>
@@ -389,6 +400,7 @@
       <div class="foot-col">
         <h5>Event</h5>
         <a href="#" class="js-register">Register</a>
+        <a href="#" class="js-luma">Luma event</a>
         <a href="#" class="js-meetup">Meetup event</a>
         <a href="#schedule">Schedule</a>
         <a href="#speakers">Speakers</a>
@@ -397,7 +409,8 @@
         <h5>Community</h5>
         <a href="#about">About</a>
         <a href="#" class="js-register">Pitch a talk</a>
-        <a href="#" class="js-meetup">Meetup group</a>
+        <a href="#" class="js-luma">Luma</a>
+        <a href="#" class="js-meetup">Meetup</a>
         <a href="#sponsors" class="js-sponsor">Sponsor us</a>
         <a href="#faq">FAQ</a>
       </div>

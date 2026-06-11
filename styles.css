@@ -114,13 +114,15 @@ h1.hero-title .navyword{color:var(--navy);}
 .ev-row .val{font-size:.98rem;color:var(--ink);font-weight:600}
 .ev-cta{margin-top:18px;display:flex;flex-direction:column;gap:12px}
 .ev-cta .btn{width:100%;justify-content:center}
-.ev-meetup{
+.ev-meetup,.ev-luma,.hero-details a{
   display:inline-flex;align-items:center;justify-content:center;gap:.45em;
   font-size:.82rem;font-weight:600;color:var(--navy-2);
   padding:4px 2px;transition:color .2s var(--ease),gap .2s var(--ease);
 }
-.ev-meetup svg{width:13px;height:13px;opacity:.75}
-.ev-meetup:hover{color:var(--ink);gap:.6em}
+.ev-meetup svg,.ev-luma svg{width:13px;height:13px;opacity:.75}
+.ev-meetup:hover,.ev-luma:hover,.hero-details a:hover{color:var(--ink);gap:.6em}
+.hero-details{display:flex;align-items:center;gap:.55em;flex-wrap:wrap;margin-top:2px}
+.hero-details .sep{color:var(--muted);font-size:.82rem;user-select:none}
 
 /* ---------- SECTIONS ---------- */
 section{position:relative}
@@ -211,6 +213,8 @@ section{position:relative}
 .faq-item.open .faq-q .ic{transform:rotate(45deg);background:var(--navy);border-color:var(--navy);color:#fff}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease)}
 .faq-a p{padding:0 0 24px;color:var(--ink-soft);font-size:1rem;max-width:64ch}
+.faq-a a{color:var(--navy-2);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.faq-a a:hover{color:var(--ink)}
 
 /* newsletter */
 .news{background:linear-gradient(155deg,#16223f,#0f1830);color:#fff;border-radius:var(--radius);padding:56px clamp(28px,5vw,72px);position:relative;overflow:hidden}

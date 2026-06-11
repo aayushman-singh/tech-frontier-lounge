@@ -4,6 +4,11 @@ document.querySelectorAll('.js-register').forEach(el=>{
   el.target='_blank';
   el.rel='noopener';
 });
+document.querySelectorAll('.js-luma').forEach(el=>{
+  el.href=TFL_LINKS.luma;
+  el.target='_blank';
+  el.rel='noopener';
+});
 document.querySelectorAll('.js-meetup').forEach(el=>{
   el.href=TFL_LINKS.meetup;
   el.target='_blank';
