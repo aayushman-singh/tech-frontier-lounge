@@ -287,8 +287,9 @@
           <p>Drop your email and we'll ping you about Vol. 01 on 14 June and future editions. No spam — just event news.</p>
         </div>
         <div>
-          <form class="news-form" id="newsForm">
-            <input type="email" placeholder="you@example.com" aria-label="Email address" required>
+          <form class="news-form" id="newsForm" novalidate>
+            <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="email" name="email" placeholder="you@example.com" aria-label="Email address" required>
             <button type="submit" class="btn">Keep me posted</button>
           </form>
           <p class="news-mini">One email per edition, tops. Unsubscribe anytime.</p>

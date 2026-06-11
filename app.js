@@ -42,9 +42,29 @@ document.querySelectorAll('.js-sponsor').forEach(b=>b.addEventListener('click',e
   if(b.getAttribute('href')==='#'){e.preventDefault();showToast('Thanks for the interest! Sponsor inbox opens soon — email hello@techfrontier.lounge.');}
 }));
 
-// newsletter
-document.getElementById('newsForm').addEventListener('submit',e=>{
-  e.preventDefault();e.target.reset();showToast('You\'re on the list — we\'ll ping you when the next edition is live. 🎉');
+// newsletter → Formspree (see TFL_LINKS.newsletter in links.js)
+const newsForm=document.getElementById('newsForm');
+const newsBtn=newsForm.querySelector('button[type="submit"]');
+const newsOk='You\'re on the list — we\'ll ping you when the next edition is live. 🎉';
+newsForm.addEventListener('submit',async e=>{
+  e.preventDefault();
+  if(newsForm.querySelector('[name="_gotcha"]').value)return;
+  const email=newsForm.querySelector('[name="email"]').value.trim();
+  const endpoint=TFL_LINKS.newsletter;
+  if(!endpoint){newsForm.reset();showToast(newsOk);return;}
+  const label=newsBtn.textContent;
+  newsBtn.disabled=true;newsBtn.textContent='Sending…';
+  try{
+    const res=await fetch(endpoint,{
+      method:'POST',
+      headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body:JSON.stringify({email,_subject:'TFL newsletter signup'}),
+    });
+    if(!res.ok)throw 0;
+    newsForm.reset();showToast(newsOk);
+  }catch{
+    showToast('Couldn\'t save that — try again in a moment.');
+  }finally{newsBtn.disabled=false;newsBtn.textContent=label;}
 });
 
 // ---- animated network background ----
