@@ -1,3 +1,15 @@
+// wire register / meetup links from links.js
+document.querySelectorAll('.js-register').forEach(el=>{
+  el.href=TFL_LINKS.register;
+  el.target='_blank';
+  el.rel='noopener';
+});
+document.querySelectorAll('.js-meetup').forEach(el=>{
+  el.href=TFL_LINKS.meetup;
+  el.target='_blank';
+  el.rel='noopener';
+});
+
 // nav scroll state
 const nav=document.getElementById('nav');
 addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10),{passive:true});
@@ -25,11 +37,7 @@ const toast=document.getElementById('toast'),toastMsg=document.getElementById('t
 let tT;
 function showToast(msg){toastMsg.textContent=msg;toast.classList.add('show');clearTimeout(tT);tT=setTimeout(()=>toast.classList.remove('show'),4200);}
 
-// register / sponsor placeholder actions
-document.querySelectorAll('.js-register').forEach(b=>b.addEventListener('click',e=>{
-  const href=b.getAttribute('href');
-  if(href==='#'||href===null){e.preventDefault();showToast('Registration link coming soon — drop your email below and you\'ll be first in.');}
-}));
+// sponsor placeholder
 document.querySelectorAll('.js-sponsor').forEach(b=>b.addEventListener('click',e=>{
   if(b.getAttribute('href')==='#'){e.preventDefault();showToast('Thanks for the interest! Sponsor inbox opens soon — email hello@techfrontier.lounge.');}
 }));

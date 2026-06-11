@@ -112,8 +112,15 @@ h1.hero-title .navyword{color:var(--navy);}
 .ev-ic svg{width:18px;height:18px}
 .ev-row .lab{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-family:"Saira";font-weight:600}
 .ev-row .val{font-size:.98rem;color:var(--ink);font-weight:600}
-.ev-cta{margin-top:18px}
+.ev-cta{margin-top:18px;display:flex;flex-direction:column;gap:12px}
 .ev-cta .btn{width:100%;justify-content:center}
+.ev-meetup{
+  display:inline-flex;align-items:center;justify-content:center;gap:.45em;
+  font-size:.82rem;font-weight:600;color:var(--navy-2);
+  padding:4px 2px;transition:color .2s var(--ease),gap .2s var(--ease);
+}
+.ev-meetup svg{width:13px;height:13px;opacity:.75}
+.ev-meetup:hover{color:var(--ink);gap:.6em}
 
 /* ---------- SECTIONS ---------- */
 section{position:relative}
@@ -153,7 +160,7 @@ section{position:relative}
 .sd-main h4{font-size:1.12rem;margin-bottom:3px}
 .sd-main p{font-size:.9rem;color:var(--ink-soft)}
 .sd-tag{font-family:"Saira";font-size:.64rem;text-transform:uppercase;letter-spacing:.16em;font-weight:600;padding:5px 11px;border-radius:50px;border:1px solid var(--hair);color:var(--muted)}
-.sd-tag.live{color:var(--navy-2);border-color:rgba(36,58,107,.35);background:rgba(36,58,107,.05)}
+.sd-tag.live{color:#1f5f3f;border-color:rgba(31,95,63,.28);background:rgba(31,95,63,.07)}
 
 /* speakers */
 .spk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
