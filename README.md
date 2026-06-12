@@ -47,7 +47,7 @@ The design ships with friendly placeholders. To make it real:
    `.sched-row` entries as the lineup and dates firm up.
 6. **Contact / social** — the footer X / LinkedIn / Discord / email links are `href="#"`.
 
-Real event details already baked in: **Hauz Khas Social, New Delhi · 4:00 PM ·
+Real event details already baked in: **Hauz Khas Social, New Delhi · 3:30 PM ·
 in person · monthly**. Event title kept vague ("Vol. 01 · Coming Soon") and
 dates as "TBA" per the brief.
 
